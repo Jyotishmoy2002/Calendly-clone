@@ -9,7 +9,8 @@ const AppRoutes = () => (
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<Dashboard />} />
-      <Route path="/events" element={<EventTypes />} />
+      {/* Changed path from /events to /event-types */}
+      <Route path="/event-types" element={<EventTypes />} /> 
       <Route path="/availability" element={<Availability />} />
       <Route path="/meetings" element={<Meetings />} />
       <Route path="/book/:slug" element={<PublicBooking />} />

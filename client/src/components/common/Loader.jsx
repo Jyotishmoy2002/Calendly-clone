@@ -1,9 +1,14 @@
-const Loader = () => {
+import { Link } from "react-router-dom";
+
+const Navbar = () => {
   return (
-    <div style={{ textAlign: "center", padding: "20px" }}>
-      <p>Loading...</p>
-    </div>
+    <nav style={{ display: "flex", gap: "15px" }}>
+      <Link to="/">Dashboard</Link>
+      <Link to="/events">Event Types</Link>
+      <Link to="/availability">Availability</Link>
+      <Link to="/meetings">Meetings</Link>
+    </nav>
   );
 };
 
-export default Loader;
+export default Navbar;
