@@ -8,8 +8,11 @@ const EventTypes = () => {
   const [duration, setDuration] = useState("");
   const [showForm, setShowForm] = useState(false);
 
-  useEffect(() => {
-    api.get("/events").then((res) => setEvents(res.data));
+ useEffect(() => {
+    // GET request to http://localhost:5000/api/events
+    api.get("/events")
+      .then((res) => setEvents(res.data))
+      .catch((err) => console.error("Link failed:", err));
   }, []);
 
   const createEvent = async () => {
